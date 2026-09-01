@@ -1,408 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrique Mejías | Formador Técnico, Logística y Datos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; scroll-behavior: smooth; }
-        section { scroll-margin-top: 100px; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .section-title { border-left: 4px solid #3b82f6; padding-left: 1rem; }
-        .nav-sticky {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .dashboard-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .dashboard-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3);
-        }
-        .lang-btn { cursor: pointer; transition: all 0.3s; opacity: 0.5; }
-        .lang-btn.active { opacity: 1; color: #3b82f6; font-weight: bold; }
-    </style>
-</head>
-<body class="text-slate-300 antialiased">
+# 👨‍🏫 Enrique Mejías Valero | Portafolio Docente & Técnico
 
-    <nav class="nav-sticky px-6 py-4">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <span class="text-white font-bold text-lg tracking-tight">Enrique Mejías</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                <a href="#perfil" class="hover:text-blue-400 transition lang" data-es="Sobre mí" data-en="About me">Sobre mí</a>
-                <a href="#portafolio" class="hover:text-blue-400 transition lang" data-es="Portafolio" data-en="Portfolio">Portafolio</a>
-                <a href="#experiencia" class="hover:text-blue-400 transition lang" data-es="Experiencia" data-en="Experience">Experiencia</a>
-                <a href="#educacion" class="hover:text-blue-400 transition lang" data-es="Educación" data-en="Education">Educación</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <div class="flex bg-slate-800 rounded-full px-3 py-1 border border-slate-700 text-[10px] font-bold">
-                    <button onclick="changeLang('es')" id="btn-es" class="lang-btn active px-2">ES</button>
-                    <span class="text-slate-600">|</span>
-                    <button onclick="changeLang('en')" id="btn-en" class="lang-btn px-2">EN</button>
-                </div>
-                <a href="https://wa.me/34611245131" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition shadow-lg shadow-green-900/20">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                    <span class="lang" data-es="Contáctame" data-en="Contact me">Contáctame</span>
-                </a>
-            </div>
-        </div>
-    </nav>
+> **Formador Técnico FPE** | Especialista en Logística, Administración y Análisis de Datos (Power BI, Excel Avanzado, SQL, ERPs, IA Generativa).
 
-    <header class="bg-slate-900/50 py-16 px-6 border-b border-slate-800">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
-            <div class="w-44 h-44 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl flex-shrink-0">
-                <img src="perfil.jpg" alt="Enrique Mejías" class="w-full h-full object-cover">
-            </div>
-            <div class="text-center md:text-left flex flex-col items-center md:items-start max-w-lg">
-                <h1 class="text-4xl font-bold text-white mb-2">Enrique Mejías Valero</h1>
-                <p class="text-blue-400 text-lg font-medium mb-4 uppercase tracking-widest leading-tight lang"
-                   data-es="Formador Técnico FPE | Especialista en Logística, Administración y Datos"
-                   data-en="VET Technical Trainer | Logistics, Administration & Data Specialist">
-                    Formador Técnico FPE | Especialista en Logística, Administración y Datos
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8 text-sm text-slate-400">
-                    <span class="flex items-center gap-2"><i class="fas fa-id-card text-blue-500"></i> <span class="lang" data-es="Carnet B" data-en="Driver's License (B)">Carnet B</span></span>
-                    <span class="flex items-center gap-2"><i class="fas fa-car text-blue-500"></i> <span class="lang" data-es="Coche propio" data-en="Own car">Coche propio</span></span>
-                    <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-500"></i> <span class="lang" data-es="Zaragoza, España" data-en="Zaragoza, Spain">Zaragoza, España</span></span>
-                </div>
-                <div class="glass-card p-5 rounded-2xl border border-white/10 w-full shadow-xl bg-slate-800/40">
-                    <p class="text-[10px] uppercase tracking-[0.3em] text-blue-400 mb-4 font-bold text-center lang" data-es="Descarga Portafolio PDF" data-en="Download Portfolio PDF">
-                        Descarga / Download
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-                        <a href="Docente_Enrique_Mejias.pdf" download="Docente_Enrique_Mejias.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl transition flex items-center justify-center gap-2 text-xs font-bold shadow-lg shadow-blue-900/30">
-                            <i class="fas fa-file-pdf"></i> CV ESPAÑOL
-                        </a>
-                        <a href="Teacher_Enrique_Mejias.pdf" download="Teacher_Enrique_Mejias.pdf" class="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2 rounded-xl transition flex items-center justify-center gap-2 text-xs font-bold border border-slate-500/30">
-                            <i class="fas fa-file-pdf text-blue-400"></i> CV ENGLISH
-                        </a>
-                    </div>
-                    <!-- QR de Portafolio con Fallback CSS Inteligente -->
-                    <div class="border-t border-white/5 pt-4 flex items-center gap-4">
-                        <div class="bg-white p-1.5 rounded-lg w-16 h-16 flex-shrink-0 flex items-center justify-center relative overflow-hidden">
-                            <img src="qr-portfolio.png" alt="QR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-contain">
-                            <div class="hidden absolute inset-0 bg-slate-100 flex items-center justify-center text-slate-400">
-                                <i class="fa-solid fa-qrcode text-2xl text-blue-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-left">
-                            <p class="text-xs font-bold text-white lang" data-es="Escanea mi QR" data-en="Scan my QR">Escanea mi QR</p>
-                            <p class="text-[10px] text-slate-400 mt-0.5 leading-snug lang" data-es="Para ver mis dashboards interactivos desde tu móvil." data-en="To view my interactive dashboards on your mobile.">Para ver mis dashboards interactivos desde tu móvil.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+[![Sitio Web](https://img.shields.io/badge/Web-Portafolio_Online-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://portafolio-docente.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Enrique_Mejías-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enrique-mejias-valero)
+[![Ubicación](https://img.shields.io/badge/Ubicación-Zaragoza,_España-red?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+---
 
-        <section id="perfil" class="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h2 class="text-2xl font-bold text-white mb-4 section-title lang" data-es="Visión Profesional" data-en="Professional Vision">Visión Profesional</h2>
-                <div class="space-y-4 text-slate-400 text-sm leading-relaxed lang"
-                     data-es="<p><strong>Especialista en administración operativa, logística y análisis de datos</strong> con más de 8 años de experiencia internacional y local en la optimización de flujos de trabajo mediante herramientas avanzadas: <strong>Power BI</strong>, <strong>Excel avanzado</strong>, <strong>SQL (MySQL)</strong>, sistemas ERPs (<strong>SAP, Nubox</strong>), <strong>CRM (Beyond Up)</strong> e <strong>IA Generativa</strong>.</p><p>Combino este sólido bagaje técnico con mis competencias pedagógicas en docencia para <strong>capacitar a equipos y alumnos</strong>, transformando la experiencia real del terreno en una formación práctica, ágil y directamente adaptada a las exigencias del mercado laboral actual.</p>"
-                     data-en="<p><strong>Operations, logistics, and data analysis specialist</strong> with over 8 years of international and local experience in optimizing workflows using advanced tools: <strong>Power BI</strong>, <strong>advanced Excel</strong>, <strong>SQL (MySQL)</strong>, ERPs (<strong>SAP, Nubox</strong>), <strong>CRM (Beyond Up)</strong>, and <strong>Generative AI</strong>.</p><p>I combine this solid technical background with my pedagogical competencies in teaching to <strong>train teams and students</strong>, transforming real-world field experience into a practical, agile training directly adapted to current job market demands.</p>">
-                    <p>Especialista en administración operativa, logística y análisis de datos con más de 8 años de experiencia.</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass-card p-4 rounded-xl text-center border-t-2 border-blue-500">
-                    <i class="fas fa-database text-blue-400 text-2xl mb-2"></i>
-                    <h4 class="text-white text-xs font-bold uppercase lang" data-es="Data & BI" data-en="Data & BI">Data & BI</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 lang" data-es="SQL, Power Query, DAX" data-en="SQL, Power Query, DAX">SQL, Power Query, DAX</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center border-t-2 border-green-500">
-                    <i class="fas fa-cubes text-green-400 text-2xl mb-2"></i>
-                    <h4 class="text-white text-xs font-bold uppercase lang" data-es="Logística & ERP" data-en="Logistics & ERP">Logística & ERP</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 lang" data-es="SAP, Nubox, WMS, Stock" data-en="SAP, Nubox, WMS, Stock">SAP, Nubox, WMS, Stock</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center border-t-2 border-purple-500">
-                    <i class="fas fa-robot text-purple-400 text-2xl mb-2"></i>
-                    <h4 class="text-white text-xs font-bold uppercase lang" data-es="Productividad & IA" data-en="Productivity & AI">Productividad & IA</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 lang" data-es="IA Generativa, Prompts" data-en="Generative AI, Prompts">IA Generativa, Prompts</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center border-t-2 border-orange-500">
-                    <i class="fas fa-chalkboard-user text-orange-400 text-2xl mb-2"></i>
-                    <h4 class="text-white text-xs font-bold uppercase lang" data-es="Docencia & FPE" data-en="Teaching & VET">Docencia & FPE</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 lang" data-es="Habilitación SSCE0110" data-en="Trainer Certified SSCE0110">Habilitación SSCE0110</p>
-                </div>
-            </div>
-        </section>
+## 📌 Visión Profesional
 
-        <section id="portafolio" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Prueba de Trabajo (Portafolio)" data-en="Proof of Work (Portfolio)">Prueba de Trabajo (Portafolio)</h2>
-            <div class="dashboard-card glass-card p-4 md:p-8 rounded-3xl overflow-hidden mt-10 border-2 border-blue-500/10 bg-gradient-to-br from-slate-800/50 to-slate-900/50">
-                <div class="flex flex-col lg:flex-row gap-8 items-center">
-                    <div class="w-full lg:w-2/3 rounded-xl overflow-hidden shadow-2xl border border-white/5">
-                        <img src="assets/img/dashboard.png" alt="Power BI Dashboard" class="w-full h-auto hover:scale-105 transition duration-700">
-                    </div>
-                    <div class="w-full lg:w-1/3 space-y-4">
-                        <div class="flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full animate-ping"></span>
-                            <span class="lang" data-es="Visualización de Datos BI" data-en="BI Data Visualization">Visualización de Datos BI</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">Business Intelligence Dashboard</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed lang"
-                            data-es="Integración visual de los datos procesados en SQL. Este panel permite analizar el rendimiento operativo y filtrar dinámicamente por categoría de producto, muelle y flujo de distribución."
-                            data-en="Visual integration of data processed in SQL. This dashboard allows analyzing operational performance and dynamically filtering by product category, dock, and distribution flow.">
-                             Integración visual de los datos procesados en SQL. Este panel permite filtrar por categoría y región.
-                        </p>
-                        <ul class="text-[11px] text-slate-500 space-y-1 py-2 lang"
-                             data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Limpieza con Power Query y modelado de datos relacional</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Fórmulas DAX avanzadas para cálculo de KPIs logísticos</li>"
-                             data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Cleaning with Power Query and relational modeling</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Advanced DAX formulas for logistics KPIs calculation</li>">
-                             <li><i class="fas fa-check text-blue-500 mr-2"></i> Limpieza con Power Query y modelado</li>
-                             <li><i class="fas fa-check text-blue-500 mr-2"></i> Fórmulas DAX avanzadas</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+Combino más de **8 años de experiencia internacional y local** en gestión administrativa, procesos logísticos y análisis de datos con competencias pedagógicas avanzadas. Mi objetivo como **Formador Técnico FPE** es transformar la experiencia operativa real del terreno en acciones formativas prácticas, dinámicas y directamente adaptadas a las demandas del mercado laboral.
 
-            <div class="glass-card p-6 rounded-2xl border border-green-500/20 flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-database text-green-400 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white text-sm lang" data-es="Consultas y Gestión de Datos en MySQL" data-en="Queries & Data Management in MySQL">Consultas y Gestión de Datos en MySQL</h3>
-                        <p class="text-xs text-slate-400 mt-1 lang" data-es="Estructuración de datos logísticos complejos y cálculos de rentabilidad comercial." data-en="Structuring of complex logistics data and business profitability calculations.">Estructuración de datos logísticos complejos y cálculos de rentabilidad comercial.</p>
-                    </div>
-                </div>
-                <a href="https://github.com/enrique-mejias-valero/practicas-sql" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 whitespace-nowrap">
-                    <i class="fab fa-github"></i> <span class="lang" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</span>
-                </a>
-            </div>
-        </section>
+* **Habilitación Docente Oficial:** Certificado de Profesionalidad en **Docencia de la Formación Profesional para el Empleo (SSCE0110)**.
+* **Experiencia Docente:** Impartición de talleres de alfabetización digital y herramientas de productividad en **Cruz Roja Española**.
+* **Especialidad Técnica:** Capacitación e instrucción en Power BI, Excel avanzado, consultas SQL (MySQL), ERPs (SAP, Nubox) e integración de IA Generativa para la productividad.
 
-        <section id="experiencia" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h2>
+---
 
-            <!-- Puesto 1: Cruz Roja -->
-            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500">
-                <div class="flex flex-col md:flex-row justify-between mb-4 border-b border-slate-700 pb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-400 lang" data-es="Formador Voluntario (Informática básica)" data-en="Volunteer Technical Trainer (Basic IT)">Formador Voluntario (Informática básica)</h3>
-                        <p class="text-white">Cruz Roja Española (Zaragoza, España)</p>
-                    </div>
-                    <span class="text-slate-500 font-mono text-sm mt-2 uppercase lang" data-es="Verano 2026" data-en="Summer 2026">Verano 2026</span>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <ul class="text-sm space-y-2 text-slate-300 lang"
-                        data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Planificación e impartición de clases de alfabetización digital y herramientas de productividad para colectivos diversos.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Simplificación de conceptos técnicos complejos, adaptando las explicaciones a los diferentes perfiles del aula.</li>"
-                        data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Planning and teaching basic IT and office productivity tools to diverse groups.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Simplification of complex technical concepts, tailoring explanations to different classroom profiles.</li>">
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Planificación e impartición de clases de alfabetización digital.</li>
-                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Simplificación de conceptos técnicos complejos.</li>
-                    </ul>
-                    <div class="bg-blue-600/5 p-4 rounded-xl border border-blue-600/20 text-sm italic text-slate-300 lang"
-                         data-es="Logros: Capacitación digital y empoderamiento laboral de alumnos mediante una metodología ágil y adaptada."
-                         data-en="Achievements: Successful digital training and professional empowerment of students using an agile and adapted methodology.">
-                        Logros: Capacitación digital y empoderamiento laboral de alumnos.
-                    </div>
-                </div>
-            </div>
+## 🛠️ Competencias & Áreas de Formación
 
-            <!-- Puesto 2: Vidrio SAT -->
-            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-green-600">
-                <div class="flex flex-col md:flex-row justify-between mb-4 border-b border-slate-700 pb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-green-400 lang" data-es="Técnico Administrativo Logístico" data-en="Logistics Administrative Technician">Técnico Administrativo Logístico</h3>
-                        <p class="text-white">Vidrio SAT (Zaragoza, España)</p>
-                    </div>
-                    <span class="text-slate-500 font-mono text-sm mt-2 uppercase lang" data-es="Junio 2026 – Agosto 2026" data-en="June 2026 – August 2026">Junio 2026 – Agosto 2026</span>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <ul class="text-sm space-y-2 text-slate-300 lang"
-                        data-es="<li><i class='fas fa-check text-green-500 mr-2'></i> Facturación de albaranes, control de pesos y gestión ágil de expediciones en campaña agrícola de alta demanda.</li><li><i class='fas fa-check text-green-500 mr-2'></i> Automatización y control administrativo de flujos logísticos de entrada y salida mediante sistema ERP SAP.</li>"
-                        data-en="<li><i class='fas fa-check text-green-500 mr-2'></i> Billing, delivery notes control, and agile shipping management during high-demand agricultural campaign.</li><li><i class='fas fa-check text-green-500 mr-2'></i> Administrative control and automation of inbound/outbound logistics flows using SAP ERP.</li>">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Facturación y control de albaranes agrícolas.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Gestión administrativa con ERP SAP.</li>
-                    </ul>
-                    <div class="bg-green-600/5 p-4 rounded-xl border border-green-600/20 text-sm italic text-slate-300 lang"
-                         data-es="Logros: Control operativo estricto bajo la alta presión temporal propia de la campaña hortofrutícola."
-                         data-en="Achievements: Strict operational control under the high-pressure environment of fresh produce campaigns.">
-                        Logros: Control operativo estricto bajo alta presión.
-                    </div>
-                </div>
-            </div>
+| Área | Herramientas y Conceptos Clave |
+| :--- | :--- |
+| **🎓 Docencia & FPE** | Metodología didáctica, diseño de unidades de aprendizaje, evaluación por competencias, adaptación para colectivos diversos (SSCE0110). |
+| **📊 Data & Business Intelligence** | Power BI, Power Query, lenguaje DAX, SQL (MySQL), modelado de datos y Excel Avanzado. |
+| **📦 Logística & ERP** | Gestión de almacenes (NIVEL 3), control de stock, sistemas WMS, SAP ERP, Nubox, expediciones e incidencias. |
+| **🤖 Productividad e IA** | Aplicación de IA Generativa, ingeniería de prompts para automatización de tareas y optimización de flujos de trabajo. |
 
-            <!-- Puesto 3 & 4: TXT Logística & Amazon Road Spain -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-blue-400">
-                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-blue-400 mb-2">TXT Logística (España)</h3>
-                    <p class="text-slate-500 text-[10px] mb-3 lang" data-es="Junio 2025 – Septiembre 2025" data-en="June 2025 – September 2025">Junio 2025 – Septiembre 2025</p>
-                    <p class="text-sm text-slate-300 lang"
-                       data-es="Administración integral de documentación técnica de transporte (albaranes, Packing Lists) y resolución oportuna de incidencias en muelle mediante sistema corporativo propio."
-                       data-en="Integral administration of transport technical documentation (delivery notes, Packing Lists) and timely resolution of dock incidents using in-house corporate systems.">
-                        Administración integral de documentación técnica de transporte (albaranes, Packing Lists) y resolución oportuna de incidencias en muelle.
-                    </p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-orange-600">
-                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-orange-400 mb-2">Amazon Road Spain</h3>
-                    <p class="text-slate-500 text-[10px] mb-3 lang" data-es="Octubre 2025 – Enero 2026" data-en="October 2025 – January 2026">Octubre 2025 – Enero 2026</p>
-                    <p class="text-sm text-slate-300 lang"
-                       data-es="Control de stock físico e informático y preparación de pedidos de alta prioridad en campaña de Navidad mediante terminales de radiofrecuencia (sistemas WMS), alcanzando un 98% de precisión."
-                       data-en="Physical and digital stock control and high-priority order preparation during Christmas campaign using RF scanners (WMS systems), achieving a 98% inventory accuracy.">
-                        Control de stock físico e informático y preparación de pedidos mediante WMS con precisión del 98%.
-                    </p>
-                </div>
-            </div>
+---
 
-            <!-- Puesto 5: Ángel Mena -->
-            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-purple-500">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <h3 class="text-xl font-bold text-purple-400 lang" data-es="Repartidor Logístico (Última Milla)" data-en="Logistics Delivery Driver (Last Mile)">Repartidor Logístico (Última Milla)</h3>
-                    <span class="text-slate-500 font-mono uppercase mt-2 md:mt-0 text-sm lang" data-es="Diciembre 2024 – Febrero 2025" data-en="December 2024 – February 2025">Diciembre 2024 – Febrero 2025</span>
-                </div>
-                <p class="text-white mb-4 italic">Ángel Mena Logistic (Zaragoza, España)</p>
-                <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
-                    <p class="lang"
-                       data-es="<i class='fas fa-truck text-purple-500 mr-2'></i> Planificación y optimización de rutas de reparto de última milla mediante software de geolocalización, garantizando un servicio eficiente."
-                       data-en="<i class='fas fa-truck text-purple-500 mr-2'></i> Planning and optimization of last-mile delivery routes using geolocalisation software, ensuring an efficient service.">
-                        Planificación y optimización de rutas de reparto de última milla mediante software de geolocalización.
-                    </p>
-                    <p class="bg-purple-600/5 p-3 rounded-lg border border-purple-600/20 italic lang"
-                       data-es="Logros: Cero incidencias en campaña de Navidad y máxima satisfacción del cliente en la entrega física."
-                       data-en="Achievements: Zero delivery incidents during Christmas campaign and peak client satisfaction during physical handovers.">
-                        Logros: Cero incidencias en campaña de Navidad y máxima satisfacción del cliente.
-                    </p>
-                </div>
-            </div>
+## 🚀 Proyectos & Prueba de Trabajo
 
-            <!-- Puesto 6: Internacional -->
-            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500 relative overflow-hidden">
-                <i class="fas fa-file-invoice-dollar absolute -bottom-4 -right-4 text-white/5 text-9xl"></i>
-                <div class="flex flex-col md:flex-row justify-between mb-6 border-b border-slate-700/50 pb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white lang" data-es="Soporte Administrativo y Gestión de Datos" data-en="Administrative Support & Data Specialist">Soporte Administrativo y Gestión de Datos</h3>
-                        <p class="text-slate-300 font-medium mt-1">Chile & Venezuela (Etapa Internacional)</p>
-                    </div>
-                    <span class="text-blue-400 text-xs font-mono border border-blue-600/30 px-3 py-1 rounded-full h-fit mt-3 md:mt-0 w-fit lang" data-es="2012 – 2024" data-en="2012 – 2024">2012 – 2024</span>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="md:col-span-2 space-y-4 text-sm text-slate-300">
-                        <p class="lang"
-                           data-es="Control administrativo, conciliaciones bancarias masivas, gestión de ciclos de nómina y automatización de reportes internos utilizando sistemas ERP SAP, Nubox y Excel avanzado."
-                           data-en="Administrative control, massive bank reconciliations, payroll cycle management, and internal report automation using SAP and Nubox ERPs, and advanced Excel.">
-                            Control administrativo, conciliaciones bancarias masivas y gestión de nóminas utilizando ERP SAP, Nubox y Excel.
-                        </p>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 lang"
-                            data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Control presupuestario y nóminas</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Automatizaciones con Excel y ERPs</li>"
-                            data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Budgeting and payroll control</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Excel and ERP automations</li>">
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Control presupuestario y nóminas</li>
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Automatizaciones con Excel y ERPs</li>
-                        </ul>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="bg-white/5 border border-white/10 p-2 rounded-lg">
-                            <p class="text-lg font-bold text-white">$2.5M <span class="text-[10px] text-blue-400">USD</span></p>
-                            <p class="text-[9px] text-slate-500 uppercase lang" data-es="Licitaciones gestionadas" data-en="Tenders managed">Licitaciones gestionadas</p>
-                        </div>
-                        <div class="bg-green-600/10 border border-green-600/20 p-2 rounded-lg text-center">
-                            <p class="text-[10px] text-green-400 font-bold italic lang" data-es="Cero observaciones Auditoría" data-en="Zero audit findings">Cero observaciones Auditoría</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+* **[Business Intelligence Dashboard](#):** Panel interactivo desarrollado en Power BI para el análisis operativo y filtrado dinámico de flujos logísticos y ventas.
+* **[Repositorio de Prácticas SQL](https://github.com/enrique-mejias-valero/practicas-sql):** Consultas avanzadas, estructuración de datos logísticos complejos y cálculos de rentabilidad comercial.
+* **[Sitio Web Portafolio Docente](https://portafolio-docente.vercel.app/):** Plataforma web bilingüe (ES/EN) con acceso a descargas de CV técnico, portafolio y dashboards interactivos.
 
-        <section id="educacion" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Educación y Formación" data-en="Education & Training">Educación y Formación</h2>
-            <div class="grid md:grid-cols-2 gap-4 text-sm">
-                <!-- Cert 1: Docencia -->
-                <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
-                    <h4 class="font-bold text-white lang" data-es="Docencia de la Formación Profesional para el Empleo (SSCE0110)" data-en="Vocational Training for Employment Trainer Certified (SSCE0110)">Docencia de la Formación Profesional para el Empleo (SSCE0110)</h4>
-                    <p class="text-slate-500 italic">GRI · INAEM (470h) | 2026</p>
-                    <p class="text-xs text-slate-400 mt-1 lang" data-es="Habilitación docente oficial. Fase teórica superada." data-en="Official VET teaching habilitation. Theoretical phase completed.">Habilitación docente oficial. Fase teórica superada.</p>
-                </div>
-                <!-- Cert 2: IA & Power BI -->
-                <div class="glass-card p-4 rounded-xl border-l-4 border-l-purple-500">
-                    <h4 class="font-bold text-white lang" data-es="IA Generativa y Power BI en la Productividad" data-en="Generative AI & Power BI for Professional Productivity">IA Generativa y Power BI en la Productividad</h4>
-                    <p class="text-slate-500 italic">Grupo Piquer, INAEM | 2026</p>
-                </div>
-                <!-- Cert 3: Gestión Almacenes -->
-                <div class="glass-card p-4 rounded-xl">
-                    <h4 class="font-bold text-white lang" data-es="Organización y Gestión de Almacenes (Nivel 3)" data-en="Warehouse Management and Operations (Level 3)">Organización y Gestión de Almacenes (Nivel 3)</h4>
-                    <p class="text-slate-500 italic">ACF Innove, INAEM (320h) | 2025</p>
-                </div>
-                <!-- Cert 4: Monitor Ocio -->
-                <div class="glass-card p-4 rounded-xl">
-                    <h4 class="font-bold text-white lang" data-es="Monitor de Actividades de Ocio y Tiempo Libre" data-en="Youth Leisure & Free Time Monitor">Monitor de Actividades de Ocio y Tiempo Libre</h4>
-                    <p class="text-slate-500 italic">Grupo Menta Formación (360h) | 2024</p>
-                </div>
-                <!-- Cert 5: Grado Económicas -->
-                <div class="glass-card p-4 rounded-xl border-l-4 border-l-orange-500">
-                    <h4 class="font-bold text-white lang" data-es="Grado en Ciencias Económicas y Contables (Formación Internacional)" data-en="Bachelor’s Degree in Economics and Accounting (International Degree)">Grado en Ciencias Económicas y Contables (Formación Internacional)</h4>
-                    <p class="text-slate-500 italic">Universidad de Carabobo | 2014</p>
-                    <p class="text-xs text-slate-400 mt-1 lang" data-es="En proceso de homologación oficial en España." data-en="Currently undergoing Spanish official validation.">En proceso de homologación oficial en España.</p>
-                </div>
-                <!-- Cert 6: Informática -->
-                <div class="glass-card p-4 rounded-xl border-l-4 border-l-green-500">
-                    <h4 class="font-bold text-white lang" data-es="Bachiller Técnico en Informática" data-en="Vocational Technical Diploma in Computer Science">Bachiller Técnico en Informática</h4>
-                    <p class="text-slate-500 italic">E.T.P. Maracay | 2007</p>
-                    <p class="text-xs text-slate-400 mt-1 lang" data-es="Título oficialmente homologado en España." data-en="Officially validated in Spain.">Título oficialmente homologado en España.</p>
-                </div>
-            </div>
-        </section>
+---
 
-    </main>
+## 🎓 Educación & Certificaciones Destacadas
 
-    <footer class="py-16 bg-slate-900 border-t border-slate-800 text-center px-6">
-        <h2 class="text-xl font-bold text-white mb-4 lang" data-es="¿Hablamos?" data-en="Let's talk?">¿Hablamos?</h2>
-        <!-- Formulario y QR WhatsApp con Fallback Inteligente -->
-        <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 mb-10 bg-slate-800/20 p-6 rounded-2xl border border-white/5">
-            <div class="flex-1 text-left space-y-2">
-                <p class="text-sm font-semibold text-white lang" data-es="Envíame un mensaje directo" data-en="Send me a direct message">Envíame un mensaje directo</p>
-                <p class="text-xs text-slate-400 lang" data-es="Escanea el código QR desde tu móvil para iniciar un chat instantáneo de WhatsApp conmigo." data-en="Scan the QR code with your mobile to start an instant WhatsApp chat with me.">Escanea el código QR desde tu móvil para iniciar un chat instantáneo de WhatsApp conmigo.</p>
-            </div>
-            <div class="bg-white p-2 rounded-xl w-32 h-32 flex-shrink-0 flex items-center justify-center relative overflow-hidden shadow-lg shadow-black/30">
-                <!-- Imagen QR WhatsApp -->
-                <img src="qr-whatsapp.png" alt="QR" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-contain">
-                <!-- Fallback CSS Vectorial (Se muestra si no se encuentra la imagen en el servidor) -->
-                <div class="hidden absolute inset-0 bg-slate-100 flex-col items-center justify-center p-2 text-slate-500">
-                    <i class="fa-solid fa-qrcode text-5xl text-blue-600 mb-1"></i>
-                    <span class="text-[9px] text-slate-600 font-bold font-sans">WHATSAPP</span>
-                </div>
-            </div>
-        </div>
+* **Docencia de la Formación Profesional para el Empleo (SSCE0110)** — *GRI · INAEM (470h)*
+* **IA Generativa y Power BI en la Productividad** — *Grupo Piquer, INAEM*
+* **Organización y Gestión de Almacenes (Nivel 3)** — *ACF Innove, INAEM (320h)*
+* **Monitor de Actividades de Ocio y Tiempo Libre** — *Grupo Menta Formación (360h)*
+* **Grado en Ciencias Económicas y Contables** — *Formación Internacional*
 
-        <div class="flex justify-center gap-8 mb-10 text-2xl">
-            <a href="mailto:eamveurope@gmail.com" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/enrique-mejías" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://wa.me/34611245131" target="_blank" class="text-slate-400 hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="text-slate-600 text-[10px] uppercase tracking-[0.5em]">Enrique Mejías Valero &copy; 2026</p>
-    </footer>
+---
 
-    <a href="https://wa.me/34611245131" target="_blank" class="fixed bottom-6 right-6 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-500 transition-all z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
+## 📬 Contacto
 
-    <script>
-        function changeLang(lang) {
-            document.querySelectorAll('.lang').forEach(el => {
-                const translation = el.getAttribute(`data-${lang}`);
-                if (translation) {
-                    el.innerHTML = translation;
-                }
-            });
-
-            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            localStorage.setItem('preferredLang', lang);
-        }
-
-        window.onload = () => {
-            const savedLang = localStorage.getItem('preferredLang') || 'es';
-            changeLang(savedLang);
-        };
-    </script>
-
-</body>
-</html>
+* 📱 **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
+* 📍 **Residencia:** Zaragoza, España (Carnet B y vehículo propio)
+* 💼 **LinkedIn:** [Enrique Mejías Valero](https://www.linkedin.com/in/enrique-mejias-valero)
