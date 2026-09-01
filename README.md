@@ -1,52 +1,54 @@
-# Enrique Mejías | Business Solutions Analyst & ERP Implementation 👋
+# 👨‍🏫 Enrique Mejías Valero | Portafolio Docente & Técnico
 
-### Especialista en Consultoría de Negocio, Nómina y Optimización Digital 📊
+> **Formador Técnico FPE** | Especialista en Logística, Administración y Análisis de Datos (Power BI, Excel Avanzado, SQL, ERPs, IA Generativa).
 
-Licenciado en Contaduría con experiencia internacional, especializado en transformar procesos operativos en ventajas competitivas. Mi enfoque une la **precisión contable**, la **gestión avanzada de ERP (SAP/Nubox)** y la **potencia de la Inteligencia Artificial** para optimizar el ciclo de vida del empleado y el cierre financiero.
-
----
-
-### 🌐 [Visita mi Portafolio Profesional Interactivo](https://enrique-data-analyst.vercel.app/) 🚀
+[![Sitio Web](https://img.shields.io/badge/Web-Portafolio_Online-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://enrique-mejias-valero.github.io/portafolio-docente/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Enrique_Mejías-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enrique-mejias-valero)
+[![Ubicación](https://img.shields.io/badge/Ubicación-Zaragoza,_España-red?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
 
 ---
 
-### 🚀 Áreas de Especialización y Proyectos
+## 📌 Visión Profesional
 
-#### 1. [Implantación de Soluciones ERP & Gestión de Nómina](https://github.com/enrique-data-analyst/enrique-data-analyst)
-- **El Desafío:** Digitalizar y automatizar ciclos contables y de nómina en entornos multimoneda.
-- **La Solución:** Configuración avanzada de módulos en **SAP** y **Nubox**, reduciendo tiempos de cierre en un **25%** y errores de nómina en un **90%**.
-- **Impacto:** Consultoría técnica para licitaciones internacionales ($2.5M USD) y cumplimiento normativo.
+Combino más de **8 años de experiencia internacional y local** en gestión administrativa, procesos logísticos y análisis de datos con competencias pedagógicas avanzadas. Mi objetivo como **Formador Técnico FPE** es transformar la experiencia operativa real del terreno en acciones formativas prácticas, dinámicas y directamente adaptadas a las demandas del mercado laboral.
 
-#### 2. [Business Intelligence para la Toma de Decisiones (Power BI)](https://github.com/enrique-data-analyst/Analisis-Inventario-POWERBI)
-- **Insight Clave:** Creación de dashboards estratégicos para el control de rentabilidad y KPIs de productividad.
-- **Técnicas:** Modelado relacional, métricas DAX para KPIs de negocio y limpieza de datos (ETL) orientada a la eficiencia operativa.
-
-#### 3. [Arquitectura de Datos y SQL para Logística](https://github.com/enrique-data-analyst/practicas-sql)
-- **Optimización:** Desarrollo de consultas SQL para el cálculo de **Lead Time** y rotación de stock, integrando datos de sistemas WMS y ERP.
+* **Habilitación Docente Oficial:** Certificado de Profesionalidad en **Docencia de la Formación Profesional para el Empleo (SSCE0110)**.
+* **Experiencia Docente:** Impartición de talleres de alfabetización digital y herramientas de productividad en **Cruz Roja Española**.
+* **Especialidad Técnica:** Capacitación e instrucción en Power BI, Excel avanzado, consultas SQL (MySQL), ERPs (SAP, Nubox) e integración de IA Generativa para la productividad.
 
 ---
 
-### 🛠️ Mi Stack Tecnológico & Expertise
+## 🛠️ Competencias & Áreas de Formación
 
-| Área | Tecnologías & Herramientas |
+| Área | Herramientas y Conceptos Clave |
 | :--- | :--- |
-| **Sistemas ERP** | **SAP (FICO/HR)**, **NUBOX**, Configuración de Nómina |
-| **Consultoría BI** | **Power BI**, SQL (Server/Postgres), Excel Avanzado (VBA/Macros) |
-| **Gestión Operativa** | WMS (Amazon Road), Análisis de Procesos, Licitaciones |
-| **Innovación & IA** | **IA Generativa** (ChatGPT, Claude, Gemini) para automatización de flujos y reportes |
+| **🎓 Docencia & FPE** | Metodología didáctica, diseño de unidades de aprendizaje, evaluación por competencias, adaptación para colectivos diversos (SSCE0110). |
+| **📊 Data & Business Intelligence** | Power BI, Power Query, lenguaje DAX, SQL (MySQL), modelado de datos y Excel Avanzado. |
+| **📦 Logística & ERP** | Gestión de almacenes (NIVEL 3), control de stock, sistemas WMS, SAP ERP, Nubox, expediciones e incidencias. |
+| **🤖 Productividad e IA** | Aplicación de IA Generativa, ingeniería de prompts para automatización de tareas y optimización de flujos de trabajo. |
 
 ---
 
-### 📫 Conectemos para transformar procesos
-- **LinkedIn:** [Enrique Mejías Valero](https://www.linkedin.com/in/enrique-mejías)
-- **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
-- **Email:** eamveurope@gmail.com
-- **Ubicación:** Zaragoza, España 🇪🇸
+## 🚀 Proyectos & Prueba de Trabajo
+
+* **[Business Intelligence Dashboard](#):** Panel interactivo desarrollado en Power BI para el análisis operativo y filtrado dinámico de flujos logísticos y ventas.
+* **[Repositorio de Prácticas SQL](https://github.com/enrique-mejias-valero/practicas-sql):** Consultas avanzadas, estructuración de datos logísticos complejos y cálculos de rentabilidad comercial.
+* **[Sitio Web Portafolio Docente](https://enrique-mejias-valero.github.io/portafolio-docente/):** Plataforma web bilingüe (ES/EN) con acceso a descargas de CV técnico, portafolio y dashboards interactivos.
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=enrique-data-analyst&show_icons=true&theme=tokyonight" alt="Estadísticas de Enrique" />
-</p>
+## 🎓 Educación & Certificaciones Destacadas
 
+* **Docencia de la Formación Profesional para el Empleo (SSCE0110)** — *GRI · INAEM (470h)*
+* **IA Generativa y Power BI en la Productividad** — *Grupo Piquer, INAEM*
+* **Organización y Gestión de Almacenes (Nivel 3)** — *ACF Innove, INAEM (320h)*
+* **Monitor de Actividades de Ocio y Tiempo Libre** — *Grupo Menta Formación (360h)*
+* **Grado en Ciencias Económicas y Contables** — *Formación Internacional*
 
+---
+
+## 📬 Contacto
+
+* 📱 **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
+* 📍 **Residencia:** Zaragoza, España (Carnet B y vehículo propio)
+* 💼 **LinkedIn:** [Enrique Mejías Valero](https://www.linkedin.com/in/enrique-mejias-valero)
