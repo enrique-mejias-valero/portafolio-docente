@@ -2,9 +2,9 @@
 
 > **Formador Técnico FPE** | Especialista en Logística, Administración y Análisis de Datos (Power BI, Excel Avanzado, SQL, ERPs, IA Generativa).
 
-[![Sitio Web](https://img.shields.io/badge/Web-Portafolio_Online-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://enrique-mejias-valero.github.io/portafolio-docente/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Enrique_Mejías-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enrique-mejias-valero)
-[![Ubicación](https://img.shields.io/badge/Ubicación-Zaragoza,_España-red?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
+🌐 **Sitio Web:** [https://portafolio-docente.vercel.app/](https://portafolio-docente.vercel.app/)  
+💼 **LinkedIn:** [https://www.linkedin.com/in/enrique-mejías](https://www.linkedin.com/in/enrique-mej%C3%ADas)  
+📍 **Ubicación:** Zaragoza, España  
 
 ---
 
@@ -31,9 +31,9 @@ Combino más de **8 años de experiencia internacional y local** en gestión adm
 
 ## 🚀 Proyectos & Prueba de Trabajo
 
-* **[Business Intelligence Dashboard](#):** Panel interactivo desarrollado en Power BI para el análisis operativo y filtrado dinámico de flujos logísticos y ventas.
+* **[Sitio Web Portafolio Docente](https://portafolio-docente.vercel.app/):** Plataforma web bilingüe (ES/EN) con acceso a descargas de CV técnico, portafolio y dashboards interactivos.
 * **[Repositorio de Prácticas SQL](https://github.com/enrique-mejias-valero/practicas-sql):** Consultas avanzadas, estructuración de datos logísticos complejos y cálculos de rentabilidad comercial.
-* **[Sitio Web Portafolio Docente](https://enrique-mejias-valero.github.io/portafolio-docente/):** Plataforma web bilingüe (ES/EN) con acceso a descargas de CV técnico, portafolio y dashboards interactivos.
+* **[Business Intelligence Dashboard](https://portafolio-docente.vercel.app/):** Panel interactivo desarrollado en Power BI para el análisis operativo y filtrado dinámico de flujos logísticos y ventas.
 
 ---
 
@@ -49,6 +49,7 @@ Combino más de **8 años de experiencia internacional y local** en gestión adm
 
 ## 📬 Contacto
 
+* 🌐 **Web:** [portafolio-docente.vercel.app](https://portafolio-docente.vercel.app/)
+* 💼 **LinkedIn:** [Enrique Mejías](https://www.linkedin.com/in/enrique-mej%C3%ADas)
 * 📱 **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
 * 📍 **Residencia:** Zaragoza, España (Carnet B y vehículo propio)
-* 💼 **LinkedIn:** [Enrique Mejías Valero](https://www.linkedin.com/in/enrique-mejias-valero)
