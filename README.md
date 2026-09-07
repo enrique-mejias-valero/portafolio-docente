@@ -3,7 +3,7 @@
 > **Formador Técnico FPE** | Especialista en Logística, Administración y Análisis de Datos (Power BI, Excel Avanzado, SQL, ERPs, IA Generativa).
 
 🌐 **Sitio Web:** [https://portafolio-docente.vercel.app/](https://portafolio-docente.vercel.app/)  
-💼 **LinkedIn:** [https://www.linkedin.com/in/enrique-mejías](https://www.linkedin.com/in/enrique-mej%C3%ADas)  
+💼 **LinkedIn:** [https://www.linkedin.com/in/enrique-mejias](https://www.linkedin.com/in/enrique-mejias)  
 📍 **Ubicación:** Zaragoza, España  
 
 ---
@@ -50,6 +50,6 @@ Combino más de **8 años de experiencia internacional y local** en gestión adm
 ## 📬 Contacto
 
 * 🌐 **Web:** [portafolio-docente.vercel.app](https://portafolio-docente.vercel.app/)
-* 💼 **LinkedIn:** [Enrique Mejías](https://www.linkedin.com/in/enrique-mej%C3%ADas)
+* 💼 **LinkedIn:** [Enrique Mejías](https://www.linkedin.com/in/enrique-mejias)
 * 📱 **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
 * 📍 **Residencia:** Zaragoza, España (Carnet B y vehículo propio)
